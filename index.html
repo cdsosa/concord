@@ -12,9 +12,8 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css" />
 
-    <!-- OWL Javascript -->
-    <script src="http://owlcarousel.owlgraphic.com/assets/vendors/jquery.min.js"></script>
-    <script src="http://owlcarousel.owlgraphic.com/assets/owlcarousel/owl.carousel.js"></script>
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
@@ -34,6 +33,47 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="js/jquery.min.js"></script>
+    <script src="owl-carousel/owl.carousel.js"></script>
+
+    <script src="owl-carousel/highlight.pack.js"></script>
+    <script src="owl-carousel/app.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            var owl = $("#owl");
+
+            owl.owlCarousel({
+
+                navigation : true, // Show next and prev buttons
+                slideSpeed : 300,
+                singleItem:true,
+                navigationText:["<i class='fa fa-angle-left'>","<i class='fa fa-angle-right'>"],
+
+                autoHeight : true,
+
+                callbacks: true,
+                URLhashListener: true,
+                autoplayHoverPause: true,
+                startPosition: 'URLHash'
+
+            });
+
+        });
+    </script>
+
+    <!-- Demo -->
+
+    <style>
+        #owl{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -46,7 +86,7 @@
 
         <div id="owl" class="owl-carousel owl-theme">
 
-            <div class="item" data-hash="three">
+            <div class="item" data-hash="one">
 
                 <section class="hero-slider">
                     <img src="images/hero/hero4.png">
@@ -66,7 +106,7 @@
 
             </div>
 
-            <div class="item" data-hash="four">
+            <div class="item" data-hash="two">
 
                 <section class="hero-slider">
                     <img src="images/hero/hero3.png">
@@ -75,9 +115,10 @@
 
                 <section class="slider-info">
                     <img class="profile-image" src="images/profile/profile2.png">
+                     <img class="profile-image2" src="images/profile/profile4.png">
                     <div class="content">
                         <h2>DEAL STORY: Relationships Turn an Unlikely Deal Into an Extraordinary One</h2>
-                        <h6>By Yoav Sarraf, Managing Director</h6>
+                        <h6>By Yoav Sarraf, Managing Director and Cecille Maristela, Director / Construction Services</h6>
                         <p>Every property and investment opportunity is unique. Managing a complex deal that serves all parties in involved is truly rewarding. It takes some teamwork, creative and strategic thinking, strong relationships, and, I think, a special brokerage. </p>
                         <h4>The Property</h4>
                         <p>The property at the center of this deal is on 3rd Street near Crescent Heights. At the time, I was actually representing another property. But I’d begun developing a relationship with the owner of the two-story, owner-user office building next door. The gentleman who owned the property had some thoughts about selling, but he was reluctant to take it to market. Still, he mentioned he would consider an offer for the property if I could introduce the right buyer. Fortunately, I was working with an investment group at the time that I believed would be an excellent fit. We started negotiating an offer.”</p>
@@ -98,7 +139,7 @@
 
             </div>
 
-            <div class="item" data-hash="one">
+            <div class="item" data-hash="three">
 
                 <section class="hero-slider">
                     <img src="images/hero/hero1.png">
@@ -129,7 +170,7 @@
 
             </div>
 
-            <div class="item" data-hash="two" >
+            <div class="item" data-hash="four">
 
                 <section class="hero-slider">
                     <img src="images/hero/hero2.png">
@@ -191,35 +232,6 @@
                 <li>T 310.551.0660    concord-re.com</li>
                 <small>Tagline Footer Copy Lorem ipsum dolor sit amet, consectetur adipiscing elit. </small>
             </ul>
-
-            <script>
-                $(document).ready(function() {
-
-                    var owl = $("#owl");
-
-                    owl.owlCarousel({
-
-                        items: 1,
-                        slideSpeed : 300,
-                        paginationSpeed : 400,
-                        rewindNav: true,
-
-                        loop: true,
-
-                        autoHeight : true,
-
-                        callbacks: true,
-                        URLhashListener: true,
-                        startPosition: 'URLHash',
-
-                        navigation : true // Show next and prev buttons
-//                        navigationText:["<i class='fa fa-angle-left'>","<i class='fa fa-angle-right'>"]
-
-                    });
-
-                });
-            </script>
-
 
         </footer>
 
