@@ -1,0 +1,60 @@
+h1 {
+  font-size: 4em;
+  font-family: @displayFont;
+  @media (max-width: @tablet){
+    font-size: 2em;
+  }
+}
+
+h2,h3,h4,h5,h6,p,li,small {
+  font-family: @primaryFont;
+}
+
+h2 {
+  font-size: 1.8em;
+  @media (max-width: @tablet){
+    font-size: 2em;
+  }
+}
+
+h3 {
+  font-size: 2.5em;
+  @media (max-width: @tablet){
+    font-size: 2em;
+  }
+}
+
+h4 {
+  font-size: 2em;
+  @media (max-width: @tablet){
+    font-size: 1.5em;
+  }
+}
+
+h5 {
+  font-size: 1.5em;
+  @media (max-width: @tablet){
+    font-size: 1.3em;
+  }
+}
+
+h6 {
+  font-size: 1em;
+  font-family: @primaryFont;
+  @media (max-width:@grid) {
+    font-size: .8em;
+  }
+}
+
+p,li {
+  color: @bodyColor;
+  font-size: .9em;
+}
+
+p{
+  line-height: 1.6em;
+}
+
+ul,p{
+  margin-bottom: 20px;
+}
