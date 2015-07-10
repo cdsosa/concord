@@ -1,28 +1,11 @@
-Concord Landing Page Cutup
 
-Rinzler 
+Concord Landing Page Cutup with Rinzler 
 ========================
 
-Rinzler facilitates your front-end cut ups, sets up a HTML boilerplate, and predefines CSS styles with LESS.
+### Clone Locally
 
-### HTML Preloaded Attributues
-
-    - HTML Boilerplate
-    - Mobile Viewport Support
-    - [FontAwesome CDN] (http://fortawesome.github.io/Font-Awesome/)
-    - jQuery CDN
-
-### Predefined CSS / LESS Attributues
-
-    - Robust reset styles
-    - Responsive headers (H1-H6)
-    - Responsive breakpoints desktop/tablet/mobile
-    - [Expansive LESS Mixin Library] (https://css-tricks.com/snippets/css/useful-css3-less-mixins/)
-
-### jQuery Features
-
-    - Mobile animated nav
-    - Accordion
+    HTTPS:  git clone https://github.com/erickolivares/concord.git
+    SSH:    git clone https://github.com/erickolivares/concord.git
 
 ### LESS Configuration
 
@@ -30,8 +13,6 @@ Rinzler facilitates your front-end cut ups, sets up a HTML boilerplate, and pred
 
         npm install less
 
+### OWL Carousel
 
-### Clone Locally
-
-    HTTPS:  git clone https://github.com/erickolivares/rinzler.git
-    SSH:    git clone https://github.com/erickolivares/rinzler.git
+    -  -http://owlcarousel.owlgraphic.com/
