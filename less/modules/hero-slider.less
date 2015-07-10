@@ -1,3 +1,32 @@
+.owl-carousel{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+  .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0px,0,0);
+    .owl-stage{
+      position: relative;
+      .owl-item{
+        position: relative;
+        min-height: 1px;
+        float: left;
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    }
+  }
+}
+
 .hero-slider{
   height:370px;
   width: 900px;
@@ -16,7 +45,7 @@
   }
 }
 
-.owl-buttons {
+.owl-controls {
   position: absolute;
   top: 205px;
   left: 102px;
@@ -25,23 +54,29 @@
     color:#ffffff;
     font-size: 32pt;
   }
-  [class^="owl"] {
+  .owl-prev, .owl-next{
+    display: block !important;
     border-radius: 25px;
     border: 2px solid #ffffff;
     width: 45px;
     height: 45px;
+    text-indent: 99999px;
+    cursor: pointer;
+    position: relative;
+    &:before {
+      content: url('images/hero/assets/angle-arrow.png');
+      position: absolute;
+      text-indent: -99999px;
+      padding: 10px 12px;
+      .box-sizing(border-box);
+    }
   }
   .owl-prev {
-    .fa {
-      padding: 0px 12px;
-    }
+      .transform (rotate(180deg));
   }
   .owl-next {
     position: absolute;
     right: 0;
     top:0;
-    .fa {
-      padding: 0px 17px;
-    }
   }
 }

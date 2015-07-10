@@ -264,6 +264,34 @@ footer small {
   margin-top: 8px;
   font-size: .9em;
 }
+.owl-carousel {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0px, 0, 0);
+}
+.owl-carousel .owl-stage-outer .owl-stage {
+  position: relative;
+}
+.owl-carousel .owl-stage-outer .owl-stage .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .hero-slider {
   height: 370px;
   width: 900px;
@@ -281,32 +309,47 @@ footer small {
   text-transform: capitalize;
   font-size: 14pt;
 }
-.owl-buttons {
+.owl-controls {
   position: absolute;
   top: 205px;
   left: 102px;
   width: 820px;
 }
-.owl-buttons .fa {
+.owl-controls .fa {
   color: #ffffff;
   font-size: 32pt;
 }
-.owl-buttons [class^="owl"] {
+.owl-controls .owl-prev,
+.owl-controls .owl-next {
+  display: block !important;
   border-radius: 25px;
   border: 2px solid #ffffff;
   width: 45px;
   height: 45px;
+  text-indent: 99999px;
+  cursor: pointer;
+  position: relative;
 }
-.owl-buttons .owl-prev .fa {
-  padding: 0px 12px;
+.owl-controls .owl-prev:before,
+.owl-controls .owl-next:before {
+  content: url('images/hero/assets/angle-arrow.png');
+  position: absolute;
+  text-indent: -99999px;
+  padding: 10px 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.owl-buttons .owl-next {
+.owl-controls .owl-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.owl-controls .owl-next {
   position: absolute;
   right: 0;
   top: 0;
-}
-.owl-buttons .owl-next .fa {
-  padding: 0px 17px;
 }
 .slider-info {
   margin: 34px auto;
@@ -322,6 +365,9 @@ footer small {
 .slider-info .content {
   float: left;
   display: inline-block;
+}
+.slider-info .profile-image {
+  width: initial !important;
 }
 .slider-info .content {
   margin-left: 24px;
